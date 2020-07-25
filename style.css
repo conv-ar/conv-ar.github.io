@@ -1,0 +1,107 @@
+/* mobile nav */
+
+.mobile-nav-item {
+  float: left;
+  cursor: pointer;
+  padding: 0.125rem 0.25rem;
+  background-color: #fafafa;
+}
+
+.mobile-nav-item .subtitle {
+  color: inherit;
+}
+
+.mobile-nav-item {
+  margin-right: 0.5rem;
+}
+
+input[name="tabs"] {
+  display: none;
+}
+  
+input[name="tabs"]:checked + .mobile-nav-item {
+  text-decoration: underline;
+  color: white;
+  background-color: #aaaaaa;
+}
+  
+input[id="guide-tab"]:checked ~ .columns.content .column#guide,
+input[id="essais-tab"]:checked ~ .columns.content .column#essais {
+  display: block;
+}
+
+.columns.content {
+  clear: both;
+  padding-top: 1.5rem;
+}
+
+.columns.content .column {
+  display: none;
+}
+
+/* end mobile nav */
+
+.columns.content .column .subtitle {
+  font-weight: normal;
+}
+
+#guide p:not(:last-child) {
+  margin-bottom: 1.5rem;
+}
+
+.card-wrapper {
+  display: block;
+}
+
+.card-wrapper:not(:last-child) {
+  margin-bottom: 1.5rem;
+}
+
+.card-wrapper .card .card-header-title .item:not(:last-child) {
+  padding-right: 0.3rem;
+}
+
+.card-wrapper .card .card-header-title .p-author .h-card:not(:last-child)::after {
+  content: ',';
+}
+
+.card-wrapper .card .card-header-title .p-author:not(:last-child)::after {
+  content: ':';
+}
+
+.card-wrapper .card .card-header-title .dt-published::before {
+  content: '(';
+}
+
+.card-wrapper .card .card-header-title .dt-published::after {
+  content: ')';
+}
+
+.footer {
+  padding: 3rem 1.5rem;
+}
+
+/* responsive */
+
+@media all and (min-width: 1024px) {
+  .header {
+    padding-bottom: 1.5rem;
+  }
+
+  #guide {
+    padding-right: 11px;
+  }
+  
+  #essais {
+    border-left: 1px dotted black;
+  }
+
+  .columns.content {
+    clear: none;
+    padding-top: 0;
+  }
+
+  .columns.content .column {
+    display: block;
+  }
+}
