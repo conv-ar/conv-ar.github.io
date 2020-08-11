@@ -41,20 +41,29 @@ input[id="essais-tab"]:checked ~ .columns.content .column#essais {
 
 /* end mobile nav */
 
+.placeholder {
+  color: #aaaaaa;
+  font-style: italic;
+}
+
 .columns.content .column .subtitle {
   font-weight: normal;
 }
 
-#guide p:not(:last-child) {
+.columns.content .column > :not(:last-child) {
   margin-bottom: 1.5rem;
+}
+
+.columns.content .column > .is-4 {
+  margin-bottom: 3rem;
 }
 
 .card-wrapper {
   display: block;
 }
 
-.card-wrapper:not(:last-child) {
-  margin-bottom: 1.5rem;
+.card-wrapper:hover .card {
+  box-shadow: 0 .5em 1em -.125em rgba(10,10,10,.25),0 0 0 1px rgba(10,10,10,.05);
 }
 
 .card-wrapper .card .card-header {
@@ -85,6 +94,14 @@ input[id="essais-tab"]:checked ~ .columns.content .column#essais {
   content: ')';
 }
 
+.card-wrapper .card .card-header .card-header-icon .icon .fa {
+  color: #aaaaaa;
+}
+
+.card-wrapper:hover .card .card-header .card-header-icon .icon .fa {
+  color: inherit;
+}
+
 .footer {
   padding: 3rem 1.5rem;
 }
@@ -96,12 +113,20 @@ input[id="essais-tab"]:checked ~ .columns.content .column#essais {
     padding-bottom: 1.5rem;
   }
 
+  .meta {
+    margin-bottom: 1.5rem;
+  }
+
   #guide {
-    padding-right: 11px;
+    padding-right: calc(var(--columnGap) - 1px);
   }
   
   #essais {
     border-left: 1px dotted black;
+  }
+
+  .column > .is-5:not(:first-child) {
+    margin-top: 3rem;
   }
 
   .columns.content {
